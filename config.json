@@ -1,0 +1,26 @@
+{
+  "mozsearch_path": "$MOZSEARCH_PATH",
+
+  "default_tree": "mozilla-central",
+
+  "trees": {
+    "webkit": {
+      "index_path": "$WORKING/webkit",
+      "files_path": "$WORKING/webkit/git",
+      "git_path": "$WORKING/webkit/git",
+      "github_repo": "https://github.com/WebKit/WebKit",
+      "objdir_path": "$WORKING/webkit/objdir",
+      "codesearch_path": "$WORKING/webkit/livegrep.idx",
+      "codesearch_port": 8082
+    },
+    "mozilla-central": {
+      "index_path": "$WORKING/mozilla-central",
+      "files_path": "$WORKING/mozilla-central/git",
+      "git_path": "$WORKING/mozilla-central/git",
+      "github_repo": "https://github.com/mozilla/gecko-dev",
+      "objdir_path": "$WORKING/mozilla-central/objdir",
+      "codesearch_path": "$WORKING/mozilla-central/livegrep.idx",
+      "codesearch_port": 8083
+    }
+  }
+}

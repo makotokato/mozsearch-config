@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+set -x # Show commands
+set -eu # Errors/undefined vars are fatal
+set -o pipefail # Check all commands in a pipeline
+
+date
+
+echo Downloading WebKit repo
+pushd $INDEX_ROOT
+if [ -d "git" ]
+then
+    echo "Found pre-existing folder; skipping re-download."
+else
+    git clone https://github.com/WebKit/WebKit git
+fi
+popd
+
+date
+
+echo Updating git
+pushd $GIT_ROOT
+git pull
+popd
+
+date
